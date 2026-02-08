@@ -3,11 +3,6 @@ import threading
 import queue
 import time
 
-# action reaction logic 
-# motion speed 
-# bounding box size similarity
-# direction of movement
-
 from person_detection import detect_and_track
 from trespass_detection import detect_trespass
 from altercation_detection import detect_altercation
@@ -184,3 +179,4 @@ def run_system(frame_callback=None, alert_callback=None, stats_callback=None):
 
     while True:
         time.sleep(1)
+
