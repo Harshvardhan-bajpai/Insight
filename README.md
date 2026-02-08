@@ -75,7 +75,7 @@ INSIGHT/
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/yourusername/INSIGHT.git
+git clone https://github.com/Harshvardhan-bajpai/Insight.git
 cd INSIGHT
 ```
 
@@ -96,6 +96,13 @@ CCTV_SRC = 0                     # Webcam index
 ROVER_SRC = 1                    # Rover camera index
 DRONE_SRC = "http://192.168.137.196:8080/?action=stream"  # Drone IP stream
 ```
+Edit `main_core.py` to configure variables:
+```python
+# ===== DETECTION TOGGLES =====
+ENABLE_TRESPASS = False          # Enable/disable trespass detection
+ENABLE_ALTERCATION = False       # Enable/disable altercation detection
+ENABLE_FACE = True               # Enable/disable face recognition
+ENABLE_ATTRIBUTES = False        # Enable/disable attribute extraction
 
 ### Step 4: Run the System
 ```bash
@@ -104,4 +111,4 @@ python app.py
 
 The web dashboard will be available at: `http://localhost:5000`
 
-Enjoy 
+Enjoy 😊
