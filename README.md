@@ -36,7 +36,8 @@ An advanced real-time surveillance system that leverages computer vision and AI 
 INSIGHT/
 ├── app.py                       # Flask web server & dashboard
 ├── main_core.py                 # Core system orchestrator
-├── person_detection.py          # YOLOv8-based person detection & ├── face_detection.py            # YuNet face detection model
+├── person_detection.py          # YOLOv8-based person detection
+├── face_detection.py            # YuNet face detection model
 ├── face_recognition_core.py     # InsightFace embeddings & matching
 ├── face_enrollment.py           # Face database enrollment
 ├── altercation_detection.py     # Aggressive behavior detection
