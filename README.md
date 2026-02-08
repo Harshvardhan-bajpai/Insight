@@ -76,7 +76,7 @@ INSIGHT/
 ### Step 1: Clone the Repository
 ```bash
 git clone https://github.com/Harshvardhan-bajpai/Insight.git
-cd INSIGHT
+cd Insight
 ```
 
 ### Step 2: Install Dependencies
