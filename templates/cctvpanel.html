@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>INSIGHT CCTV Control</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: linear-gradient(135deg,#0f172a,#1e293b,#334155);
+  color:white;
+  font-family:'Inter',sans-serif;
+  min-height:100vh;
+}
+
+body::before {
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size:30px 30px;
+  pointer-events:none;
+  z-index:1;
+}
+
+.nav-bar {
+  position:relative; z-index:10;
+  background:rgba(15,23,42,0.95);
+  border-bottom:1px solid rgba(220,38,38,0.4);
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1rem 2rem;
+}
+.nav-brand { font-size:1.5rem; font-weight:700; letter-spacing:1px; }
+.nav-links button {
+  background:transparent; border:1px solid rgba(255,255,255,0.25);
+  color:white; padding:0.6rem 1.1rem; margin-left:0.6rem;
+  border-radius:6px; cursor:pointer;
+}
+.nav-links button:hover { background:rgba(255,255,255,0.1); }
+
+/* VIDEO + LOG */
+.main-grid {
+  position:relative; z-index:10;
+  display:grid; grid-template-columns:3fr 1fr;
+  gap:1.5rem; padding:1.5rem 2rem;
+}
+
+.video-panel, .log-panel {
+  background:rgba(15,23,42,0.95);
+  border:2px solid rgba(71,85,105,0.4);
+  border-radius:10px;
+  overflow:hidden;
+  height:480px;
+}
+
+.video-body {
+  height:100%;
+  background:black;
+  display:flex; align-items:center; justify-content:center;
+}
+
+.log-body {
+  height:100%;
+  overflow-y:auto;
+  padding:0.8rem 1rem;
+  display:flex;
+  flex-direction:column;
+}
+
+.section-title {
+  font-size:1rem;
+  color:#3b82f6;
+  margin-bottom:0.8rem;
+  text-transform:uppercase;
+}
+
+.log-entry {
+  font-family:'Roboto Mono',monospace;
+  font-size:0.8rem;
+  margin-bottom:0.6rem;
+}
+.log-time { color:#94a3b8; }
+
+/* CONTROL GRID */
+.control-grid {
+  position:relative; z-index:10;
+  display:grid; grid-template-columns:2fr 1fr 1fr;
+  gap:1.5rem; padding:0 2rem;
+}
+
+/* MANUAL CAMERA */
+.control-panel {
+  background:rgba(15,23,42,0.9);
+  border:1px solid rgba(71,85,105,0.4);
+  border-radius:10px;
+  padding:1rem;
+}
+
+.pan-visual {
+  position:relative;
+  width:240px;
+  height:160px;
+  margin:1rem auto;
+}
+
+.pan-line {
+  position:absolute;
+  bottom:20px;
+  left:0;
+  width:100%;
+  height:2px;
+  background:#64748b;
+}
+
+.pan-arc {
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  width:200px;
+  height:100px;
+  border:2px solid #64748b;
+  border-bottom:none;
+  border-radius:200px 200px 0 0;
+}
+
+.arrow-container {
+  position:absolute;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  width:2px;
+  height:100px;
+  transform-origin:bottom center;
+}
+
+.arrow {
+  position:absolute;
+  bottom:0;
+  left:-5px;
+  width:12px;
+  height:12px;
+  background:red;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.beam {
+  position:absolute;
+  bottom:0;
+  left:-1px;
+  width:2px;
+  height:140px;
+  border-left:2px dashed rgba(255,0,0,0.6);
+}
+
+.speed-group input { width:100%; }
+
+/* AUTO TRACK */
+.track-panel {
+  background:rgba(15,23,42,0.9);
+  border:1px solid rgba(71,85,105,0.4);
+  border-radius:10px;
+  padding:1rem;
+}
+
+.track-status {
+  font-size:0.9rem;
+  color:#10b981;
+  margin-bottom:0.6rem;
+}
+
+.toggle-btn {
+  width:100%;
+  background:#10b981;
+  border:none;
+  color:white;
+  padding:0.7rem;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+}
+.toggle-btn.off { background:#ef4444; }
+
+/* STATUS PANEL */
+.status-panel {
+  background:rgba(15,23,42,0.9);
+  border:1px solid rgba(71,85,105,0.4);
+  border-radius:10px;
+  padding:1rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav-bar">
+  <div class="nav-brand">INSIGHT PUBLIC SURVEILLANCE</div>
+  <div class="nav-links">
+    <button onclick="window.location.href='/'">Home</button>
+    <button onclick="window.location.href='/facedb'">Face DB</button>
+    <button onclick="window.location.href='/events'">Events</button>
+  </div>
+</div>
+
+<!-- VIDEO + LOG -->
+<div class="main-grid">
+  <div class="video-panel">
+    <div class="video-body">
+      <img src="/video/CCTV" id="cctvVideo" style="width:100%;height:100%;object-fit:contain;">
+    </div>
+  </div>
+
+  <div class="log-panel">
+    <div class="section-title" style="padding:0.8rem 1rem 0 1rem;">
+      SURVEILLANCE LOG
+    </div>
+    <div class="log-body" id="surveillanceLog">
+      <div class="log-entry">
+        <span class="log-time">[--:--]</span> CCTV online. AI detection initialized.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTROLS -->
+<div class="control-grid">
+
+  <!-- MANUAL -->
+  <div class="control-panel">
+    <div class="section-title">MANUAL CAMERA PAN / TILT</div>
+
+    <div class="pan-visual">
+      <div class="pan-line"></div>
+      <div class="pan-arc"></div>
+
+      <div class="arrow-container" id="arrowContainer">
+        <div class="beam" id="beam"></div>
+        <div class="arrow"></div>
+      </div>
+    </div>
+
+    <div class="speed-group">
+      <input type="range" min="0" max="100" value="50" id="speedSlider">
+    </div>
+  </div>
+
+  <!-- AUTO TRACK -->
+  <div class="track-panel">
+    <div class="section-title">AUTO TRACK</div>
+    <div class="track-status" id="trackStatus">
+      Status: INACTIVE
+    </div>
+
+    <button class="toggle-btn" id="autoTrackBtn" onclick="toggleAutoTrack()">
+      TURN AUTO-TRACKING ON
+    </button>
+  </div>
+
+  <!-- STATUS -->
+  <div class="status-panel" id="statusPanel">
+    <div class="section-title">CAMERA STATUS</div>
+    State: IDLE<br>
+    Mode: MANUAL<br>
+    Pan Angle: 0°<br>
+    Link: CONNECTED<br>
+    Signal: -58 dBm<br>
+    Temp: 41°C<br>
+    Uptime: 02:14:36
+  </div>
+
+</div>
+
+<script>
+const log = document.getElementById("surveillanceLog");
+const trackStatus = document.getElementById("trackStatus");
+const autoTrackBtn = document.getElementById("autoTrackBtn");
+const speedSlider = document.getElementById("speedSlider");
+const statusPanel = document.getElementById("statusPanel");
+const arrowContainer = document.getElementById("arrowContainer");
+
+let autoTracking = false;
+
+function addLog(msg) {
+  const t = new Date().toTimeString().substr(0,8);
+  const div = document.createElement("div");
+  div.className = "log-entry";
+  div.innerHTML = `<span class="log-time">[${t}]</span> ${msg}`;
+  log.prepend(div);
+  log.scrollTop = 0;
+}
+
+function updatePanVisual(val) {
+  const angle = (val - 50) * 1.8;
+  arrowContainer.style.transform = `translateX(-50%) rotate(${angle}deg)`;
+
+  addLog("Camera pan adjusted to " + Math.round(angle) + "°");
+
+  statusPanel.innerHTML = `
+    <div class="section-title">CAMERA STATUS</div>
+    State: IDLE<br>
+    Mode: ${autoTracking ? "AUTO" : "MANUAL"}<br>
+    Pan Angle: ${Math.round(angle)}°<br>
+    Link: CONNECTED<br>
+    Signal: -58 dBm<br>
+    Temp: 41°C<br>
+    Uptime: 02:14:36
+  `;
+}
+
+speedSlider.addEventListener("input", e => {
+  updatePanVisual(e.target.value);
+});
+
+function toggleAutoTrack() {
+  autoTracking = !autoTracking;
+
+  if (autoTracking) {
+    trackStatus.innerText = "Status: ACTIVE";
+    autoTrackBtn.innerText = "TURN AUTO-TRACKING OFF";
+    autoTrackBtn.classList.add("off");
+    addLog("Auto-tracking enabled.");
+  } else {
+    trackStatus.innerText = "Status: INACTIVE";
+    autoTrackBtn.innerText = "TURN AUTO-TRACKING ON";
+    autoTrackBtn.classList.remove("off");
+    addLog("Auto-tracking disabled.");
+  }
+
+  updatePanVisual(speedSlider.value);
+}
+</script>
+
+</body>
+</html>

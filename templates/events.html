@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>INSIGHT Events</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: linear-gradient(135deg,#0f172a,#1e293b,#334155);
+  color:white;
+  font-family:'Inter',sans-serif;
+  min-height:100vh;
+}
+
+body::before {
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size:30px 30px;
+  pointer-events:none;
+  z-index:1;
+}
+
+.nav-bar {
+  position:relative; z-index:10;
+  background:rgba(15,23,42,0.95);
+  border-bottom:1px solid rgba(220,38,38,0.4);
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1rem 2rem;
+}
+
+.nav-brand { font-size:1.5rem; font-weight:700; letter-spacing:1px; }
+
+.nav-links button {
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.25);
+  color:white;
+  padding:0.6rem 1.1rem;
+  margin-left:0.6rem;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.nav-links button:hover { background:rgba(255,255,255,0.1); }
+
+.container {
+  position:relative; z-index:10;
+  padding:1.5rem 2rem;
+}
+
+.section-title {
+  font-size:1.2rem;
+  color:#3b82f6;
+  margin-bottom:1rem;
+  text-transform:uppercase;
+}
+
+.filter-bar {
+  display:flex;
+  gap:1rem;
+  margin-bottom:1rem;
+}
+
+.filter-bar select, .filter-bar input {
+  background:#0f172a;
+  border:1px solid rgba(255,255,255,0.25);
+  color:white;
+  padding:0.6rem 0.8rem;
+  border-radius:6px;
+}
+
+.events-table {
+  width:100%;
+  border-collapse:collapse;
+  background:rgba(15,23,42,0.95);
+  border:2px solid rgba(71,85,105,0.4);
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.events-table th, .events-table td {
+  padding:0.7rem 0.9rem;
+  font-size:0.85rem;
+  border-bottom:1px solid rgba(71,85,105,0.3);
+}
+
+.events-table th {
+  background:rgba(30,41,59,0.9);
+  color:#cbd5e1;
+  text-align:left;
+}
+
+.events-table tr:hover { background:rgba(255,255,255,0.05); }
+
+.severity-high { color:#ef4444; font-weight:700; }
+.severity-medium { color:#f59e0b; font-weight:700; }
+.severity-low { color:#10b981; font-weight:700; }
+</style>
+</head>
+
+<body>
+
+<div class="nav-bar">
+  <div class="nav-brand">INSIGHT EVENTS</div>
+  <div class="nav-links">
+    <button onclick="location.href='/'">Home</button>
+    <button onclick="location.href='/facedb'">Face DB</button>
+    <button onclick="location.href='/cctv'">CCTV</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="section-title">Event History</div>
+
+  <div class="filter-bar">
+    <select id="typeFilter">
+      <option value="">All Types</option>
+      <option>Altercation</option>
+      <option>Trespass</option>
+      <option>Face Match</option>
+    </select>
+
+    <select id="severityFilter">
+      <option value="">All Severities</option>
+      <option>High</option>
+      <option>Medium</option>
+      <option>Low</option>
+    </select>
+
+    <input type="date" id="dateFilter">
+  </div>
+
+  <table class="events-table">
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Camera</th>
+        <th>Event</th>
+        <th>Subject</th>
+        <th>Severity</th>
+      </tr>
+    </thead>
+    <tbody id="eventsBody"></tbody>
+  </table>
+
+</div>
+
+<script>
+const body = document.getElementById("eventsBody");
+const typeFilter = document.getElementById("typeFilter");
+const severityFilter = document.getElementById("severityFilter");
+const dateFilter = document.getElementById("dateFilter");
+
+let EVENTS = [];
+
+function formatTime(ts) {
+  const d = new Date(ts * 1000);
+  return d.toISOString().replace("T"," ").substring(0,19);
+}
+
+function severityClass(s) {
+  if (s === "High") return "severity-high";
+  if (s === "Medium") return "severity-medium";
+  return "severity-low";
+}
+
+function render() {
+  body.innerHTML = "";
+
+  EVENTS.forEach(e => {
+    const dateStr = formatTime(e.timestamp);
+
+    if (typeFilter.value && !e.title.toLowerCase().includes(typeFilter.value.toLowerCase())) return;
+    if (severityFilter.value && e.severity !== severityFilter.value) return;
+    if (dateFilter.value && !dateStr.startsWith(dateFilter.value)) return;
+
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${dateStr}</td>
+      <td>${e.feed}</td>
+      <td>${e.title}</td>
+      <td>${e.description}</td>
+      <td class="${severityClass(e.severity)}">${e.severity}</td>
+    `;
+    body.appendChild(tr);
+  });
+}
+
+async function loadEvents() {
+  const res = await fetch("/api/events");
+  EVENTS = await res.json();
+  render();
+}
+
+[typeFilter, severityFilter, dateFilter].forEach(el =>
+  el.addEventListener("change", render)
+);
+
+setInterval(loadEvents, 2000);
+loadEvents();
+</script>
+
+</body>
+</html>

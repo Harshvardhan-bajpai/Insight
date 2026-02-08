@@ -1,0 +1,3260 @@
+[
+  {
+    "timestamp": 1769646825.702272,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.01,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769646829.780362,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.01,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769646838.2958972,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.07,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769646842.688431,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": -0.03,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769646848.5886645,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.1,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769646854.2124195,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.03,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769646860.1407762,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.0,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769646864.5548449,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.0,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769646990.787175,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.01,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647003.0526252,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.07,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647008.8258805,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": -0.03,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647665.789185,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.01,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647679.1367216,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.07,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647684.0922582,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": -0.03,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647688.4555058,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": -0.02,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647693.952489,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.03,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647698.3155663,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.03,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647702.6171038,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.02,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647707.2033596,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.02,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647712.6218128,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.05,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647720.8749714,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.06,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647725.7480264,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.06,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647732.006204,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.08,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647738.7512796,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.0,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647875.5364628,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.01,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647887.548867,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.07,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769647892.9776812,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": -0.03,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648204.6748233,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.01,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648216.1623483,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.07,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648221.1738358,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": -0.03,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648226.831544,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.03,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648232.06998,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.03,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648237.4958441,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.02,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648242.518653,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.07,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648248.7270346,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.06,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648252.8570776,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.06,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648257.8300984,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.08,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648262.9488242,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.0,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648274.5182433,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": -0.02,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648281.699098,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": -0.04,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648294.3289487,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.01,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648298.4715638,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.01,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648303.1605282,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.0,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648397.0667055,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.01,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769648401.9737468,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.01,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769649003.7072482,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.01,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769649012.060826,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.01,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769649016.511055,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.03,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769649021.6817307,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.08,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769649027.27407,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "ROVER",
+    "confidence": 0.08,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769650426.3865535,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.48,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769650435.7298577,
+    "type": "face_watchlist",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.51,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769650445.2774882,
+    "type": "face_watchlist",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.68,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769650453.0195515,
+    "type": "face_watchlist",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.67,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769650459.7874572,
+    "type": "face_watchlist",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.57,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769650469.9242408,
+    "type": "face_watchlist",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.53,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769650481.1976197,
+    "type": "face_watchlist",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.58,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651015.9523885,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.37,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651026.1768413,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.67,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651042.9163465,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.45,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651064.4445004,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.7,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651072.0873115,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.53,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651084.4462435,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.63,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651090.6304822,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.68,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651103.5277667,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.63,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651423.8750405,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.65,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651438.54263,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.51,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651552.7409244,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.46,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651563.5694199,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.48,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651571.2034209,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.56,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651577.6571412,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.57,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651600.6243138,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.63,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651606.6490881,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.66,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651637.8128266,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": -0.0,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769651643.3356872,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.46,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651680.101498,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.32,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651687.6820686,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.31,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769651697.667526,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.45,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651708.1436946,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.28,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769651709.8586693,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.51,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651744.7091382,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.65,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651755.0375412,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.65,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651762.6598306,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.45,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769651772.4363945,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.6,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653046.2314973,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.52,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653055.6903534,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.64,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653067.774225,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.49,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653097.4915066,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.54,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653104.2341154,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.25,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769653112.7439487,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.48,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653123.1740687,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": -0.03,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769653127.8889818,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.58,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653139.0237083,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.53,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653150.5639915,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.43,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653207.3779562,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.41,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653212.529829,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.27,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769653215.204823,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.39,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653221.8629587,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.52,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653229.1996107,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.53,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653239.8400893,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.5,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653244.8957045,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": -0.04,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769653246.0302696,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.36,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653270.0696685,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": -0.02,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769653273.5269842,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.51,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653287.6879616,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.05,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769653305.6338472,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.12,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769653366.1999304,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.54,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653376.012316,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.39,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653378.0147023,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.22,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769653419.016649,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.26,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769653434.557636,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.38,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653448.0214822,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.23,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769653469.0968628,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": -0.1,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769653510.3245766,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.49,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653513.6647284,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.22,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769653523.9216962,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.31,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769653584.9087186,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.42,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653591.0942907,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.45,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653597.4280446,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.28,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769653601.2947772,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.51,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653653.6982312,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.26,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769653655.2747452,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.48,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653661.318408,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.53,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653670.095333,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.53,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653673.8941286,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.33,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769653685.102799,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.37,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769653696.533513,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.46,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769670422.3198116,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.53,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769670428.6458323,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.48,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769670432.416077,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": -0.03,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769670434.892684,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.53,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769670447.4603415,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.64,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769670458.6127164,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.51,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769670468.5550249,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.66,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769670505.5346797,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.61,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769670511.8955607,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.52,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769670519.2374442,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.38,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776711.795617,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.12,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769776714.5324345,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.57,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776716.4825773,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776716.5106914,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776716.5344837,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769776718.4451153,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": -0.01,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769776743.7007716,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.56,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776758.4096098,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.43,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776767.684989,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.02,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769776770.796677,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776770.8249805,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776770.8435805,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769776771.9585752,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.03,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769776775.1341043,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776775.15144,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776775.178826,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769776776.5219655,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776777.4104843,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776777.4291997,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.08,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769776778.0485375,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.9,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769776778.5741558,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.9,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776781.9597754,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776781.9804847,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776781.996992,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769776782.533291,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776784.0246217,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.07,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769776784.555126,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.85,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769776785.107418,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.57,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769776788.3557277,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.09,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769776793.301661,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.12,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769776798.971038,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.08,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903859.900265,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.08,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903870.8963847,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.05,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903875.1195655,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.01,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903883.6669135,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.04,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903887.70184,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.09,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903891.7584763,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.06,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903895.9342725,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.08,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903901.4479861,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.04,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903905.7135534,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.07,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903907.7245958,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.62,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769903910.6424844,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.1,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903914.7722712,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.08,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903919.599995,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.11,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903924.342534,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": -0.03,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903928.669534,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.14,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903933.0859327,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": -0.0,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903940.200528,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.04,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903942.6857543,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.61,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769903948.8036864,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.51,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769903967.597601,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.09,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903976.5739734,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.0,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769903988.4791858,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": -0.11,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769904010.4726686,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": -0.02,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769904014.7539892,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.07,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769904020.6965947,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.06,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769904031.8960314,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": -0.07,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769904061.7133057,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904061.7457936,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904061.7779553,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904085.6971085,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.76,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904085.7248375,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.98,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904085.7530012,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.98,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904085.7871733,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.76,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904086.0499644,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904140.2607179,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.87,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904140.286319,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.87,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904140.3281002,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.87,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904155.2671342,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.9,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904155.2994256,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.9,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904155.3317823,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.9,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904156.508847,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.89,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904156.5423777,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904157.6273437,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904157.6571443,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904158.0211265,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904158.2132764,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.92,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904158.2448251,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.92,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904176.5731328,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904176.6043246,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904176.6314788,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904178.7186356,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904178.7489312,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904576.9183614,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904576.9530892,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904576.9821424,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904588.3239598,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.95,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904588.355343,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.95,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904588.3821113,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.95,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904591.2167175,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904591.2519455,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904591.281213,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904593.633026,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.97,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904593.6601605,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.97,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904593.9375615,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.98,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904593.9681509,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.98,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904606.6342103,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.88,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904606.6687498,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.88,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904606.6963277,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.88,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904609.6158853,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.88,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904609.6503372,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.88,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904609.6772225,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.88,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904612.2147474,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.88,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904612.2417629,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.88,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904612.273237,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.88,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904653.2754226,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904653.317412,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904653.3562768,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904658.226325,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.88,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904658.2692087,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.88,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904658.3181036,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.88,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904672.0815542,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.9,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904672.1223135,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.9,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904672.1786735,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.9,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904702.5825567,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.91,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904702.6313334,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.91,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904702.6638312,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.91,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904713.5385947,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.95,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904713.5949035,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.95,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904713.6454175,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.95,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904717.7122948,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904717.754714,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904717.8061876,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904741.225242,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904741.2771049,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904741.3275633,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904746.4371614,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.97,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904746.4755015,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.97,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904746.5198994,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.97,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904748.2209914,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.94,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904748.4934268,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904748.8449433,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904749.2093003,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.97,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904751.9209707,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904751.9563766,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904752.0100546,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904758.7562606,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904758.787513,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904758.8241093,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904761.3128366,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904761.3465447,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904761.388319,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904765.78012,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904765.8141568,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904765.8541183,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904778.7257376,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904778.766703,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904778.8105109,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904822.157956,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904822.193662,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904822.2370203,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904822.3566551,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904839.9583888,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.97,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904840.0009491,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.97,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904840.0424826,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.97,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904840.7821817,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.98,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904841.4073486,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.98,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904842.1164978,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.95,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904842.1459894,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.95,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904842.6998072,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904844.0216196,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904844.4920077,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904845.0203464,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904845.3598638,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.85,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904847.2051985,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.84,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904847.238239,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.84,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904853.0838742,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904853.1149044,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904853.152426,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.99,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904853.29563,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.88,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904862.8713408,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904862.9076543,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904862.9475675,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904876.402662,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.9,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904876.4333942,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.9,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904876.4673696,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.9,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904882.8742237,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.96,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904882.9104671,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.96,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904882.9457393,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.96,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904884.3116312,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.81,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904890.8746204,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904890.9172313,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904890.9546628,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 1.0,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904896.584464,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.93,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904896.613612,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.93,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904896.6506693,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.93,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904899.397866,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.93,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904899.424906,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.93,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904899.4572132,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.93,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904905.1234484,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.88,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904905.1517062,
+    "type": "altercation",
+    "title": "Possible altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.88,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904905.1821072,
+    "type": "altercation",
+    "title": "Altercation detected",
+    "description": "Person involved",
+    "feed": "CCTV",
+    "confidence": 0.88,
+    "severity": "High"
+  },
+  {
+    "timestamp": 1769904957.5247838,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.42,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904958.9701886,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.33,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769904964.4067025,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.43,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769904984.1700904,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": -0.01,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905012.1364348,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.22,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905027.5391917,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.04,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905032.0164545,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.11,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905036.3372705,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.28,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905041.9249814,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.08,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905043.7216916,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.58,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769905067.6012607,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.6,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769905075.4060354,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.4,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769905081.922983,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.47,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769905095.2876294,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.07,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905101.602851,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.1,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905105.7432828,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.05,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905114.873555,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.52,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769905130.3668568,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.39,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769905140.3266113,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.06,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905151.0106757,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.13,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905168.576679,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.04,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905191.3423748,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.52,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769905195.0461118,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.33,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905199.164978,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.2,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905217.5829067,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.52,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769905223.5688,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.02,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905256.9548476,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.4,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769905277.5244374,
+    "type": "face_criminal",
+    "title": "Criminal detected",
+    "description": "hru",
+    "feed": "CCTV",
+    "confidence": 0.51,
+    "severity": "Medium"
+  },
+  {
+    "timestamp": 1769905288.6430268,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.03,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905296.6075573,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": -0.0,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905308.629496,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.01,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769905317.2750292,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": -0.04,
+    "severity": "Low"
+  },
+  {
+    "timestamp": 1769906663.4534295,
+    "type": "face_unknown",
+    "title": "Unknown face detected",
+    "description": "Unidentified individual",
+    "feed": "CCTV",
+    "confidence": 0.26,
+    "severity": "Low"
+  }
+]

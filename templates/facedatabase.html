@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>INSIGHT Face Database</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: linear-gradient(135deg,#0f172a,#1e293b,#334155);
+  color:white;
+  font-family:'Inter',sans-serif;
+  min-height:100vh;
+}
+
+body::before {
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size:30px 30px;
+  pointer-events:none;
+  z-index:1;
+}
+
+.nav-bar {
+  position:relative; z-index:10;
+  background:rgba(15,23,42,0.95);
+  border-bottom:1px solid rgba(220,38,38,0.4);
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1rem 2rem;
+}
+.nav-brand { font-size:1.5rem; font-weight:700; letter-spacing:1px; }
+.nav-links button {
+  background:transparent; border:1px solid rgba(255,255,255,0.25);
+  color:white; padding:0.6rem 1.1rem; margin-left:0.6rem;
+  border-radius:6px; cursor:pointer;
+}
+.nav-links button:hover { background:rgba(255,255,255,0.1); }
+
+.container {
+  position:relative; z-index:10;
+  padding:1.5rem 2rem;
+}
+
+.section-title {
+  font-size:1.2rem;
+  color:#3b82f6;
+  margin-bottom:1rem;
+  text-transform:uppercase;
+}
+
+.top-grid {
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:1.5rem;
+}
+
+.panel {
+  background:rgba(15,23,42,0.95);
+  border:2px solid rgba(71,85,105,0.4);
+  border-radius:10px;
+  padding:1rem;
+}
+
+.search-bar input {
+  width:100%;
+  background:#0f172a;
+  border:1px solid rgba(255,255,255,0.25);
+  color:white;
+  padding:0.7rem 1rem;
+  border-radius:6px;
+  margin-bottom:1rem;
+}
+
+.face-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+  gap:1rem;
+}
+
+.face-card {
+  background:rgba(30,41,59,0.9);
+  border:1px solid rgba(71,85,105,0.4);
+  border-radius:8px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.face-card:hover {
+  transform:translateY(-4px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.5);
+}
+
+.face-thumb {
+  width:100%;
+  height:140px;
+  background:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#64748b;
+  overflow:hidden;
+}
+
+.face-thumb img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.face-info {
+  padding:0.6rem;
+  font-size:0.85rem;
+}
+
+.face-name { font-weight:600; }
+.face-id { color:#94a3b8; font-size:0.75rem; }
+
+.upload-panel label {
+  display:block;
+  margin-bottom:0.5rem;
+  font-size:0.85rem;
+  color:#cbd5e1;
+}
+
+.upload-panel input, .upload-panel select {
+  width:100%;
+  background:#0f172a;
+  border:1px solid rgba(255,255,255,0.25);
+  color:white;
+  padding:0.6rem 0.8rem;
+  border-radius:6px;
+  margin-bottom:0.8rem;
+}
+
+.upload-panel button {
+  width:100%;
+  background:#10b981;
+  border:none;
+  color:white;
+  padding:0.7rem;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.upload-panel button:hover { background:#059669; }
+</style>
+</head>
+
+<body>
+
+<div class="nav-bar">
+  <div class="nav-brand">INSIGHT FACE DATABASE</div>
+  <div class="nav-links">
+    <button onclick="location.href='/'">Home</button>
+    <button onclick="location.href='/events'">Events</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="top-grid">
+
+    <!-- FACE LIST -->
+    <div class="panel">
+      <div class="section-title">Registered Faces</div>
+
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search by name or ID...">
+      </div>
+
+      <div class="face-grid" id="faceGrid">
+        <!-- Loaded dynamically -->
+      </div>
+    </div>
+
+    <!-- UPLOAD -->
+    <div class="panel upload-panel">
+      <div class="section-title">Add New Face</div>
+
+      <label>Name *</label>
+      <input type="text" id="nameInput" placeholder="Full name">
+
+      <label>Category *</label>
+      <select id="categorySelect">
+        <option>Criminal</option>
+        <option>Watchlist</option>
+        <option>Employee</option>
+        <option>Resident</option>
+        <option>Security</option>
+        <option>Ex-Convict</option>
+      </select>
+
+      <label>Unique ID *</label>
+      <input type="text" id="idInput" placeholder="ID / Case number">
+
+      <label>Upload Image *</label>
+      <input type="file" id="imageInput" accept="image/*">
+
+      <button onclick="addFace()">Add to Database</button>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+const faceGrid = document.getElementById("faceGrid");
+
+/* =========================
+   LOAD STORED FACES
+   ========================= */
+async function loadFaces() {
+  faceGrid.innerHTML = "";
+
+  const res = await fetch("/api/faces");
+  const faces = await res.json();
+
+  faces.forEach(f => {
+    const card = document.createElement("div");
+    card.className = "face-card";
+
+    // f.image is already like "/faces/0123.jpg"
+    const imgSrc = f.image || `/faces/${f.unique_id}.jpg`;
+    const uid = f.unique_id || f.person_id || "";
+
+    card.innerHTML = `
+      <div class="face-thumb">
+        <img src="${imgSrc}">
+      </div>
+      <div class="face-info">
+        <div class="face-name">${f.name || ""}</div>
+        <div class="face-id">ID: ${uid} (${f.category || ""})</div>
+      </div>
+    `;
+    faceGrid.appendChild(card);
+  });
+}
+
+/* =========================
+   ADD FACE
+   ========================= */
+async function addFace() {
+  const name = nameInput.value.trim();
+  const id = idInput.value.trim();
+  const category = categorySelect.value;
+  const file = imageInput.files[0];
+
+  if (!name || !id || !file) return;
+
+  const reader = new FileReader();
+  reader.onload = async e => {
+    await fetch("/api/enroll_face", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({
+        name,
+        person_id: id,       // backend maps this to unique_id
+        category,
+        image: e.target.result
+      })
+    });
+    loadFaces();
+  };
+  reader.readAsDataURL(file);
+}
+
+/* =========================
+   SEARCH FILTER
+   ========================= */
+searchInput.addEventListener("input", () => {
+  const q = searchInput.value.toLowerCase();
+  document.querySelectorAll(".face-card").forEach(card => {
+    card.style.display =
+      card.innerText.toLowerCase().includes(q) ? "block" : "none";
+  });
+});
+
+/* AUTO LOAD */
+window.onload = loadFaces;
+</script>
+
+</body>
+</html>

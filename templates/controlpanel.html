@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>INSIGHT Public Surveillance</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 30px 30px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* NAV BAR */
+    .nav-bar {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      background: rgba(15,23,42,0.95);
+      border-bottom: 1px solid rgba(220,38,38,0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .nav-brand {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .nav-links button {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: white;
+      padding: 0.6rem 1.1rem;
+      margin-left: 0.6rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .nav-links button:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* GLOBAL ALERT */
+    .global-alert {
+      display: none;
+      background: linear-gradient(135deg, rgba(239,68,68,0.95), rgba(220,38,38,0.95));
+      padding: 1rem;
+      margin: 1rem 2rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 700;
+      animation: alertPulse 2s infinite;
+      position: relative;
+      z-index: 10;
+    }
+
+    .global-alert.active { display: block; }
+
+    @keyframes alertPulse {
+      0%,100% { box-shadow: 0 0 20px rgba(239,68,68,0.3); }
+      50% { box-shadow: 0 0 35px rgba(239,68,68,0.6); }
+    }
+
+    /* FEEDS GRID */
+    .feeds-grid {
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      padding: 1.5rem 2rem;
+    }
+
+    .feed-tile {
+      background: rgba(15,23,42,0.95);
+      border: 2px solid rgba(71,85,105,0.4);
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.25s ease;
+    }
+
+    .feed-tile:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    }
+
+    .feed-tile.alert {
+      border-color: rgba(239,68,68,0.95);
+      box-shadow: 0 0 25px rgba(239,68,68,0.6);
+    }
+
+    .feed-header {
+      padding: 0.8rem;
+      background: rgba(30,41,59,0.85);
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .feed-body {
+      height: 220px;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .feed-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .feed-status {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(0,0,0,0.65);
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+    }
+
+    /* SURVEILLANCE LOG */
+    .log-panel {
+      position: relative;
+      z-index: 10;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(71,85,105,0.4);
+      border-radius: 10px;
+      margin: 0 2rem;
+      padding: 1rem 1.5rem;
+      max-height: 230px;
+      backdrop-filter: blur(10px);
+    }
+
+    .log-panel h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #3b82f6;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    #logEntries {
+      overflow-y: auto;
+      max-height: 170px;
+    }
+
+    .log-entry {
+      margin-bottom: 0.7rem;
+      line-height: 1.4;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.85rem;
+      color: #e5e7eb;
+    }
+
+    .log-time { color: #94a3b8; }
+    .log-event { color: #fbbf24; }
+    .log-confidence { color: #10b981; }
+
+    /* STATS PANEL */
+    .stats-panel {
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      padding: 1.5rem 2rem;
+    }
+
+    .stat-card {
+      background: rgba(30,41,59,0.5);
+      border: 1px solid rgba(71,85,105,0.3);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .stat-card h4 {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #3b82f6;
+      font-family: 'Roboto Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV BAR -->
+  <div class="nav-bar">
+    <div class="nav-brand">INSIGHT PUBLIC SURVEILLANCE</div>
+    <div class="nav-links">
+      <button onclick="goHome()">Home</button>
+      <button onclick="goFaceDB()">Face DB</button>
+      <button onclick="goEvents()">Events</button>
+    </div>
+  </div>
+
+  <!-- GLOBAL ALERT -->
+  <div class="global-alert" id="globalAlert">
+    <span id="alertMessage"></span>
+  </div>
+
+  <!-- FEEDS GRID -->
+  <div class="feeds-grid">
+
+    <div class="feed-tile" id="droneFeed" onclick="openFeed('drone')">
+      <div class="feed-header">DRONE FEED</div>
+      <div class="feed-body">
+        <img src="/video/DRONE" class="feed-video">
+      </div>
+      <div class="feed-status">LIVE</div>
+    </div>
+
+    <div class="feed-tile" id="roverFeed" onclick="openFeed('rover')">
+      <div class="feed-header">ROVER FEED</div>
+      <div class="feed-body">
+        <img src="/video/ROVER" class="feed-video">
+      </div>
+      <div class="feed-status">LIVE</div>
+    </div>
+
+    <div class="feed-tile" id="cctvFeed" onclick="openFeed('cctv')">
+      <div class="feed-header">CCTV FEED</div>
+      <div class="feed-body">
+        <img src="/video/CCTV" class="feed-video">
+      </div>
+      <div class="feed-status">LIVE</div>
+    </div>
+
+  </div>
+
+  <!-- SURVEILLANCE LOG -->
+  <div class="log-panel">
+    <h3>Surveillance Log</h3>
+    <div id="logEntries">
+      <div class="log-entry">
+        System initialized. Awaiting detections...
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS PANEL -->
+  <div class="stats-panel">
+
+    <div class="stat-card">
+      <h4>Total People</h4>
+      <div class="stat-number" id="totalPeople">0</div>
+    </div>
+
+    <div class="stat-card">
+      <h4>Alerts</h4>
+      <div class="stat-number" id="alertCount">0</div>
+    </div>
+
+    <div class="stat-card">
+      <h4>Crowd Density</h4>
+      <div class="stat-number" id="densityLevel">Low</div>
+    </div>
+
+  </div>
+
+  <script>
+    function goHome() { window.location.href = "/"; }
+    function goFaceDB() { window.location.href = "/facedb"; }
+    function goEvents() { window.location.href = "/events"; }
+
+    function openFeed(type) {
+      if (type === "drone") window.location.href = "/drone";
+      if (type === "rover") window.location.href = "/rover";
+      if (type === "cctv") window.location.href = "/cctv";
+    }
+
+    let lastAlertCount = 0;
+
+    async function pollAlerts() {
+      const res = await fetch("/api/alerts");
+      const alerts = await res.json();
+
+      if (alerts.length > lastAlertCount) {
+        const newOnes = alerts.slice(lastAlertCount);
+        newOnes.forEach(a => handleAlert(a));
+        lastAlertCount = alerts.length;
+      }
+    }
+
+    async function pollStats() {
+      const res = await fetch("/api/stats");
+      const stats = await res.json();
+
+      document.getElementById("totalPeople").innerText = stats.total_people;
+      document.getElementById("alertCount").innerText = stats.alerts;
+
+      const density =
+        stats.total_people < 5 ? "Low" :
+        stats.total_people < 15 ? "Moderate" : "High";
+
+      document.getElementById("densityLevel").innerText = density;
+    }
+
+    function handleAlert(alert) {
+      const banner = document.getElementById("globalAlert");
+      const text = document.getElementById("alertMessage");
+
+      // FIX: build message safely
+      const title = alert.title || "Alert detected";
+      const desc = alert.description || "";
+
+      text.innerText = desc ? `${title} – ${desc}` : title;
+
+      banner.classList.add("active");
+
+      highlightFeed(alert.feed);
+
+      addLog(
+        desc || "Person involved",
+        alert.type || "alert",
+        alert.feed || "UNKNOWN",
+        Math.round((alert.confidence || 0) * 100)
+      );
+
+      setTimeout(() => banner.classList.remove("active"), 3500);
+    }
+
+
+    function highlightFeed(feed) {
+      document.querySelectorAll(".feed-tile").forEach(tile => {
+        tile.classList.remove("alert");
+      });
+
+      if (feed === "CCTV") document.getElementById("cctvFeed").classList.add("alert");
+      if (feed === "ROVER") document.getElementById("roverFeed").classList.add("alert");
+      if (feed === "DRONE") document.getElementById("droneFeed").classList.add("alert");
+    }
+
+    function addLog(desc, eventType, camera, confidence) {
+      const logContainer = document.getElementById("logEntries");
+
+      const now = new Date();
+      const time = now.toTimeString().substr(0, 8);
+
+      const div = document.createElement("div");
+      div.className = "log-entry";
+      div.innerHTML = `
+        <span class="log-time">[${time}]</span>
+        ${desc}<br>
+        <span class="log-event">${eventType}</span> on ${camera}<br>
+        Confidence: <span class="log-confidence">${confidence}%</span>
+      `;
+
+      logContainer.prepend(div);
+      logContainer.scrollTop = 0;
+    }
+
+    setInterval(pollAlerts, 500);
+    setInterval(pollStats, 1000);
+  </script>
+
+</body>
+</html>

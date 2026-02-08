@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>INSIGHT Drone Control</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"/>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/dist/leaflet.draw.js"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: linear-gradient(135deg,#0f172a,#1e293b,#334155);
+  color:white;
+  font-family:'Inter',sans-serif;
+  min-height:100vh;
+}
+
+body::before {
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size:30px 30px;
+  pointer-events:none;
+  z-index:1;
+}
+
+.nav-bar {
+  position:relative; z-index:10;
+  background:rgba(15,23,42,0.95);
+  border-bottom:1px solid rgba(220,38,38,0.4);
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1rem 2rem;
+}
+.nav-brand { font-size:1.5rem; font-weight:700; letter-spacing:1px; }
+.nav-links button {
+  background:transparent; border:1px solid rgba(255,255,255,0.25);
+  color:white; padding:0.6rem 1.1rem; margin-left:0.6rem;
+  border-radius:6px; cursor:pointer;
+}
+.nav-links button:hover { background:rgba(255,255,255,0.1); }
+
+/* VIDEO + LOG 3:1 (TALLER) */
+.main-grid {
+  position:relative; z-index:10;
+  display:grid; grid-template-columns:3fr 1fr;
+  gap:1.5rem; padding:1.5rem 2rem;
+}
+
+.video-panel, .log-panel {
+  background:rgba(15,23,42,0.95);
+  border:2px solid rgba(71,85,105,0.4);
+  border-radius:10px;
+  overflow:hidden;
+  height:460px;
+}
+
+.video-body {
+  height:100%;
+  background:black;
+}
+
+.video-body img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.log-body {
+  height:100%;
+  overflow-y:auto;
+  padding:0.8rem 1rem;
+}
+
+.log-entry {
+  font-family:'Roboto Mono',monospace;
+  font-size:0.8rem;
+  margin-bottom:0.6rem;
+}
+.log-time { color:#94a3b8; }
+
+/* PLANNER */
+.planner-grid {
+  position:relative; z-index:10;
+  display:grid; grid-template-columns:3fr 2fr;
+  gap:1.5rem; padding:0 2rem;
+}
+
+.map-panel {
+  background:rgba(15,23,42,0.9);
+  border:1px solid rgba(71,85,105,0.4);
+  border-radius:10px;
+  overflow:hidden;
+}
+#map { height:100%; width:100%; }
+
+.params-panel {
+  background:rgba(15,23,42,0.9);
+  border:1px solid rgba(71,85,105,0.4);
+  border-radius:10px;
+  padding:1rem;
+}
+
+.section-title {
+  font-size:1rem;
+  color:#3b82f6;
+  margin-bottom:0.8rem;
+  text-transform:uppercase;
+}
+
+.param-group { margin-bottom:0.8rem; }
+.param-group label { font-size:0.85rem; color:#cbd5e1; }
+.param-group input, .param-group select {
+  width:100%; padding:0.4rem;
+  border-radius:6px;
+  border:1px solid rgba(255,255,255,0.2);
+  background:#0f172a; color:white;
+}
+.required { color:#ef4444; font-weight:700; }
+
+.start-btn {
+  width:100%; margin-top:1rem;
+  background:#10b981; border:none;
+  color:white; padding:0.8rem;
+  border-radius:8px; font-weight:700;
+  cursor:pointer;
+}
+.start-btn:hover { background:#059669; }
+
+/* MISSION LOG */
+.mission-log {
+  position:relative; z-index:10;
+  background:rgba(15,23,42,0.9);
+  border:1px solid rgba(71,85,105,0.4);
+  border-radius:10px;
+  margin:1.5rem 2rem;
+  padding:1rem 1.5rem;
+  max-height:300px;
+  overflow-y:auto;
+}
+
+/* Drone icon styling */
+.drone-icon {
+  color: #ff3b30;
+  font-size: 20px;
+  line-height: 1;
+  text-shadow: 0 0 6px rgba(255,59,48,0.6);
+  display: inline-block;
+  transform: rotate(0deg);
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav-bar">
+  <div class="nav-brand">INSIGHT PUBLIC SURVEILLANCE</div>
+  <div class="nav-links">
+    <button onclick="goHome()">Home</button>
+    <button onclick="goFaceDB()">Face DB</button>
+    <button onclick="goEvents()">Events</button>
+  </div>
+</div>
+
+<!-- VIDEO + LOG -->
+<div class="main-grid">
+  <div class="video-panel">
+    <div class="video-body">
+      <img src="/video/DRONE" id="droneVideo">
+    </div>
+  </div>
+
+  <div class="log-panel">
+    <div class="section-title" style="padding:0.8rem 1rem 0 1rem;">
+        SURVEILLANCE LOG
+    </div>
+    <div class="log-body" id="investigationLog">
+        <div class="log-entry">
+        <span class="log-time">[--:--]</span> No active alerts. AI surveillance running...
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- PLANNER -->
+<div class="planner-grid">
+
+  <div class="map-panel">
+    <div id="map"></div>
+  </div>
+
+  <div class="params-panel">
+    <div class="section-title">MISSION PARAMETERS</div>
+
+    <div class="param-group">
+      <label>Altitude (m) <span class="required">*</span></label>
+      <input type="number" id="altitudeInput" value="30">
+    </div>
+
+    <div class="param-group">
+      <label>Speed (m/s) <span class="required">*</span></label>
+      <input type="number" id="speedInput" value="6">
+    </div>
+
+    <div class="param-group">
+      <label>Flying Mode</label>
+      <select id="flyingMode">
+        <option selected>Return to Home</option>
+        <option>Loiter</option>
+        <option>Patrol</option>
+        <option>Manual Override</option>
+      </select>
+    </div>
+
+    <div class="param-group">
+      <label>Fail-Safe</label>
+      <select id="failSafe">
+        <option selected>Return to Home</option>
+        <option>Smart Land</option>
+        <option>Hover</option>
+      </select>
+    </div>
+
+    <div class="param-group">
+      <label>When Mission Completes</label>
+      <select id="onComplete">
+        <option selected>Return to Base</option>
+        <option>Smart Land</option>
+        <option>Hover</option>
+      </select>
+    </div>
+
+    <button class="start-btn" id="startMissionBtn">START MISSION</button>
+  </div>
+</div>
+
+<!-- MISSION LOG -->
+<div class="mission-log" id="missionLog">
+  <div class="section-title">MISSION LOG</div>
+  <div class="log-entry"><span class="log-time">[--:--]</span> Please plan a mission to see detailed log.</div>
+</div>
+
+<script>
+function goHome() { window.location.href = "/"; }
+function goFaceDB() { window.location.href = "/facedb"; }
+function goEvents() { window.location.href = "/events"; }
+
+const DRONE_LAT = 28.568444;
+const DRONE_LNG = 76.316666;
+
+const map = L.map('map').setView([DRONE_LAT, DRONE_LNG], 16);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+const drawnItems = new L.FeatureGroup();
+map.addLayer(drawnItems);
+
+const drawControl = new L.Control.Draw({
+  edit: { featureGroup: drawnItems },
+  draw: {
+    polygon: true,
+    polyline: false,
+    rectangle: false,
+    circle: false,
+    marker: false,
+    circlemarker: false
+  }
+});
+map.addControl(drawControl);
+
+const droneIcon = L.divIcon({ html: "➤", className: "drone-icon", iconSize: [24,24], iconAnchor: [12,12] });
+L.marker([DRONE_LAT, DRONE_LNG], { icon: droneIcon }).addTo(map);
+
+function addMissionLog(msg) {
+  const log = document.getElementById("missionLog");
+  const placeholder = log.querySelector(".log-entry");
+  if (placeholder && placeholder.innerText.includes("Please plan a mission")) {
+    log.innerHTML = `<div class="section-title">MISSION LOG</div>`;
+  }
+  const t = new Date().toTimeString().substr(0,8);
+  const div = document.createElement("div");
+  div.className = "log-entry";
+  div.innerHTML = `<span class="log-time">[${t}]</span> ${msg}`;
+  log.prepend(div);
+  log.scrollTop = 0;
+}
+
+map.on(L.Draw.Event.CREATED, e => {
+  drawnItems.clearLayers();
+  drawnItems.addLayer(e.layer);
+
+  const coords = e.layer.getLatLngs()[0];
+
+  addMissionLog("Mission A1 initialized");
+  addMissionLog("Mission area defined");
+  addMissionLog("Waypoints:");
+
+  coords.forEach((pt, i) => {
+    addMissionLog(`  ${i+1} → [${pt.lat.toFixed(5)}, ${pt.lng.toFixed(5)}]`);
+  });
+
+  logParams();
+});
+
+function logParams() {
+  addMissionLog("Altitude: " + altitudeInput.value + " m");
+  addMissionLog("Speed: " + speedInput.value + " m/s");
+  addMissionLog("Flying Mode: " + flyingMode.value);
+  addMissionLog("Fail-Safe: " + failSafe.value);
+  addMissionLog("On Completion: " + onComplete.value);
+  addMissionLog("Drone Status:");
+  addMissionLog("  State: UNARMED");
+  addMissionLog("  Mode: STANDBY");
+  addMissionLog("  Battery: 87%");
+  addMissionLog("  GPS: LOCKED");
+}
+
+altitudeInput.addEventListener("change", logParams);
+speedInput.addEventListener("change", logParams);
+flyingMode.addEventListener("change", logParams);
+failSafe.addEventListener("change", logParams);
+onComplete.addEventListener("change", logParams);
+
+startMissionBtn.addEventListener("click", () => {
+  addMissionLog("Mission started");
+});
+</script>
+
+</body>
+</html>

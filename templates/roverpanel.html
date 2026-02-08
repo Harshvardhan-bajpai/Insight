@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>INSIGHT Rover Control</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: linear-gradient(135deg,#0f172a,#1e293b,#334155);
+  color:white;
+  font-family:'Inter',sans-serif;
+  min-height:100vh;
+}
+
+body::before {
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size:30px 30px;
+  pointer-events:none;
+  z-index:1;
+}
+
+.nav-bar {
+  position:relative; z-index:10;
+  background:rgba(15,23,42,0.95);
+  border-bottom:1px solid rgba(220,38,38,0.4);
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1rem 2rem;
+}
+.nav-brand { font-size:1.5rem; font-weight:700; letter-spacing:1px; }
+.nav-links button {
+  background:transparent; border:1px solid rgba(255,255,255,0.25);
+  color:white; padding:0.6rem 1.1rem; margin-left:0.6rem;
+  border-radius:6px; cursor:pointer;
+}
+.nav-links button:hover { background:rgba(255,255,255,0.1); }
+
+/* VIDEO + LOG 3:1 */
+.main-grid {
+  position:relative; z-index:10;
+  display:grid; grid-template-columns:3fr 1fr;
+  gap:1.5rem; padding:1.5rem 2rem;
+}
+
+.video-panel, .log-panel {
+  background:rgba(15,23,42,0.95);
+  border:2px solid rgba(71,85,105,0.4);
+  border-radius:10px;
+  overflow:hidden;
+  height:460px;
+}
+
+.video-body {
+  height:100%;
+  background:black;
+}
+
+.video-body img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.log-body {
+  height:100%;
+  overflow-y:auto;
+  padding:0.8rem 1rem;
+}
+
+.section-title {
+  font-size:1rem;
+  color:#3b82f6;
+  margin-bottom:0.8rem;
+  text-transform:uppercase;
+}
+
+.log-entry {
+  font-family:'Roboto Mono',monospace;
+  font-size:0.8rem;
+  margin-bottom:0.6rem;
+}
+.log-time { color:#94a3b8; }
+
+/* CONTROL GRID */
+.control-grid {
+  position:relative; z-index:10;
+  display:grid; grid-template-columns:2fr 1fr 1fr;
+  gap:1.5rem; padding:0 2rem;
+}
+
+/* MANUAL CONTROLS */
+.control-panel {
+  background:rgba(15,23,42,0.9);
+  border:1px solid rgba(71,85,105,0.4);
+  border-radius:10px;
+  padding:1rem;
+}
+
+.control-buttons {
+  display:grid;
+  grid-template-columns:60px 60px 60px;
+  grid-template-rows:60px 60px 60px;
+  gap:0.5rem;
+  justify-content:center;
+  margin-top:1rem;
+}
+
+.ctrl-btn {
+  background:#0f172a;
+  border:1px solid rgba(255,255,255,0.25);
+  color:white;
+  font-size:1.2rem;
+  border-radius:8px;
+  cursor:pointer;
+}
+.ctrl-btn:hover { background:rgba(255,255,255,0.08); }
+.ctrl-btn.active {
+  background:#2563eb;
+  border-color:#3b82f6;
+}
+
+.speed-group { margin-top:1rem; }
+.speed-group input { width:100%; }
+
+/* AUTO FOLLOW */
+.follow-panel {
+  background:rgba(15,23,42,0.9);
+  border:1px solid rgba(71,85,105,0.4);
+  border-radius:10px;
+  padding:1rem;
+}
+
+.follow-status {
+  font-size:0.9rem;
+  color:#10b981;
+  margin-bottom:0.6rem;
+}
+
+.lock-btn {
+  width:100%;
+  background:#10b981;
+  border:none;
+  color:white;
+  padding:0.7rem;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+  margin-top:0.5rem;
+}
+.lock-btn.unlock { background:#ef4444; }
+
+.switch-btn {
+  width:100%;
+  background:#3b82f6;
+  border:none;
+  color:white;
+  padding:0.7rem;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* STATUS PANEL */
+.status-panel {
+  background:rgba(15,23,42,0.9);
+  border:1px solid rgba(71,85,105,0.4);
+  border-radius:10px;
+  padding:1rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav-bar">
+  <div class="nav-brand">INSIGHT PUBLIC SURVEILLANCE</div>
+  <div class="nav-links">
+    <button onclick="window.location.href='/'">Home</button>
+    <button onclick="window.location.href='/facedb'">Face DB</button>
+    <button onclick="window.location.href='/events'">Events</button>
+  </div>
+</div>
+
+<!-- VIDEO + LOG -->
+<div class="main-grid">
+  <div class="video-panel">
+    <div class="video-body">
+      <img src="/video/ROVER" id="roverVideo">
+    </div>
+  </div>
+
+  <div class="log-panel">
+    <div class="section-title" style="padding:0.8rem 1rem 0 1rem;">SURVEILLANCE LOG</div>
+    <div class="log-body" id="surveillanceLog">
+      <div class="log-entry">
+        <span class="log-time">[--:--]</span> Rover online. AI tracking initialized.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTROLS -->
+<div class="control-grid">
+
+  <!-- MANUAL -->
+  <div class="control-panel">
+    <div class="section-title">MANUAL CONTROL</div>
+
+    <div class="control-buttons">
+      <div></div>
+      <button class="ctrl-btn" id="btnW">W</button>
+      <div></div>
+
+      <button class="ctrl-btn" id="btnA">A</button>
+      <button class="ctrl-btn" id="btnStop">■</button>
+      <button class="ctrl-btn" id="btnD">D</button>
+
+      <div></div>
+      <button class="ctrl-btn" id="btnS">S</button>
+      <div></div>
+    </div>
+
+    <div class="speed-group">
+      <label>Speed</label>
+      <input type="range" min="0" max="100" value="40" id="speedSlider">
+    </div>
+  </div>
+
+  <!-- AUTO FOLLOW -->
+  <div class="follow-panel">
+    <div class="section-title">AUTO FOLLOW</div>
+    <div class="follow-status" id="followStatus">Status: INACTIVE</div>
+
+    <button class="switch-btn" onclick="switchTarget()">SWITCH TARGET</button>
+    <button class="lock-btn" id="lockBtn" onclick="toggleLock()">LOCK TARGET</button>
+  </div>
+
+  <!-- STATUS -->
+  <div class="status-panel" id="statusPanel">
+    <div class="section-title">ROVER STATUS</div>
+    State: IDLE<br>
+    Mode: MANUAL<br>
+    Speed: 40%<br>
+    Battery: 82%<br>
+    Link: CONNECTED<br>
+    Signal: -63 dBm<br>
+    GPS: LOCKED<br>
+    CPU Load: 21%<br>
+    Temp: 38°C
+  </div>
+
+</div>
+
+<script>
+const log = document.getElementById("surveillanceLog");
+const followStatus = document.getElementById("followStatus");
+const lockBtn = document.getElementById("lockBtn");
+const speedSlider = document.getElementById("speedSlider");
+const statusPanel = document.getElementById("statusPanel");
+
+const btns = {
+  forward: document.getElementById("btnW"),
+  left: document.getElementById("btnA"),
+  backward: document.getElementById("btnS"),
+  right: document.getElementById("btnD"),
+  stop: document.getElementById("btnStop")
+};
+
+let latchedDirection = null;
+let keyActive = null;
+
+function addLog(msg) {
+  const t = new Date().toTimeString().substr(0,8);
+  const div = document.createElement("div");
+  div.className = "log-entry";
+  div.innerHTML = `<span class="log-time">[${t}]</span> ${msg}`;
+  log.prepend(div);
+  log.scrollTop = 0;
+}
+
+// Mark rover as active when this page is open
+async function setRoverActive(active) {
+  try {
+    await fetch("/api/rover/active", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ active })
+    });
+    addLog(active ? "Rover panel ACTIVE (tracking/controls enabled)." :
+                    "Rover panel INACTIVE (tracking/controls disabled).");
+  } catch (e) {
+    console.error("Failed to set rover active flag", e);
+    addLog("Failed to update rover active flag.");
+  }
+}
+
+setRoverActive(true);
+
+window.addEventListener("beforeunload", () => {
+  try {
+    navigator.sendBeacon(
+      "/api/rover/active",
+      new Blob([JSON.stringify({ active: false })], { type: "application/json" })
+    );
+  } catch (e) {
+    // ignore
+  }
+});
+
+// Manual rover command to backend
+async function sendRoverCommand(cmd) {
+  try {
+    await fetch("/api/rover/command", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ command: cmd })
+    });
+    addLog(`Command sent: ${cmd}`);
+  } catch (e) {
+    console.error("Failed to send rover command", e);
+    addLog(`Failed to send command: ${cmd}`);
+  }
+}
+
+function setActiveButton(dir) {
+  Object.values(btns).forEach(b => b.classList.remove("active"));
+  if (btns[dir]) btns[dir].classList.add("active");
+}
+
+function move(dir, source="ui") {
+  const speed = speedSlider.value;
+  addLog(`Manual move: ${dir.toUpperCase()} @ ${speed}% (${source})`);
+  setActiveButton(dir);
+  latchedDirection = source === "ui" ? dir : null;
+  keyActive = source === "key" ? dir : null;
+
+  const cmdMap = {
+    forward: "W",
+    left: "A",
+    backward: "S",
+    right: "D"
+  };
+  const cmd = cmdMap[dir];
+  if (cmd) {
+    sendRoverCommand(cmd);
+  }
+}
+
+function stopMove(source="ui") {
+  addLog(`Stop movement (${source})`);
+  Object.values(btns).forEach(b => b.classList.remove("active"));
+  latchedDirection = null;
+  keyActive = null;
+  sendRoverCommand("X");
+}
+
+// UI button clicks
+btns.forward.onclick  = () => toggleUI("forward");
+btns.left.onclick     = () => toggleUI("left");
+btns.backward.onclick = () => toggleUI("backward");
+btns.right.onclick    = () => toggleUI("right");
+btns.stop.onclick     = () => stopMove("ui");
+
+function toggleUI(dir) {
+  if (latchedDirection === dir) stopMove("ui");
+  else move(dir, "ui");
+}
+
+// Keyboard controls
+document.addEventListener("keydown", e => {
+  const k = e.key.toLowerCase();
+  if (["w","a","s","d"].includes(k)) {
+    const map = { w:"forward", a:"left", s:"backward", d:"right" };
+    move(map[k], "key");
+  }
+});
+
+document.addEventListener("keyup", e => {
+  const k = e.key.toLowerCase();
+  if (["w","a","s","d"].includes(k)) stopMove("key");
+});
+
+// Speed slider (UI only)
+speedSlider.addEventListener("change", e => {
+  const speed = e.target.value;
+  addLog("Speed set to " + speed + "%");
+  statusPanel.innerHTML = `
+    <div class="section-title">ROVER STATUS</div>
+    State: IDLE<br>
+    Mode: MANUAL<br>
+    Speed: ${speed}%<br>
+    Battery: 82%<br>
+    Link: CONNECTED<br>
+    Signal: -63 dBm<br>
+    GPS: LOCKED<br>
+    CPU Load: 21%<br>
+    Temp: 38°C
+  `;
+});
+
+// Auto follow → backend tracker
+async function switchTarget() {
+  addLog("Switch target requested.");
+  try {
+    await fetch("/api/rover/switch_target", {
+      method: "POST"
+    });
+    // Tracker in backend updates active (red) box
+  } catch (e) {
+    console.error(e);
+    addLog("Switch target failed.");
+  }
+}
+
+async function toggleLock() {
+  try {
+    const res = await fetch("/api/rover/toggle_lock", {
+      method: "POST"
+    });
+    const data = await res.json();
+    if (data.locked) {
+      lockBtn.innerText = "UNLOCK TARGET";
+      lockBtn.classList.add("unlock");
+      followStatus.innerText = "Status: ACTIVE";
+      addLog("Target locked. Auto-follow enabled.");
+    } else {
+      lockBtn.innerText = "LOCK TARGET";
+      lockBtn.classList.remove("unlock");
+      followStatus.innerText = "Status: INACTIVE";
+      addLog("Target unlocked. Auto-follow disabled.");
+    }
+  } catch (e) {
+    console.error(e);
+    addLog("Lock toggle failed.");
+  }
+}
+</script>
+
+</body>
+</html>
