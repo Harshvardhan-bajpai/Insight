@@ -1,0 +1,13 @@
+opencv-python==4.8.1.78
+opencv-contrib-python==4.8.1.78
+numpy==1.24.3
+ultralytics==8.0.195
+torch==2.0.1
+torchvision==0.15.2
+insightface==0.7.3
+mediapipe==0.10.0
+Flask==3.0.0
+Werkzeug==3.0.1
+pyserial==3.5
+scipy==1.11.3
+scikit-learn==1.3.2
